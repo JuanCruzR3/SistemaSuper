@@ -211,7 +211,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Grupo eliminado.");
                 txtDescripcionRol.Clear();
                 txtDescripcionRol.Tag = null;
-                LimpiarSeleccionPermisos();  
+                LimpiarSeleccionPermisos();
                 CargarGrupos();
             }
         }
@@ -233,6 +233,11 @@ namespace CapaPresentacion
             txtDescripcionRol.Tag = null;
             LimpiarSeleccionPermisos();
             dgvGrupos.ClearSelection();
+        }
+
+        private void btnregresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

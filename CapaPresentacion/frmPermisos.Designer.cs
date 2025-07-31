@@ -36,6 +36,7 @@
             dgvGrupos = new DataGridView();
             btncancelar = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
+            btnregresar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgvPermisos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvGrupos).BeginInit();
             SuspendLayout();
@@ -48,7 +49,7 @@
             dgvPermisos.Name = "dgvPermisos";
             dgvPermisos.RowHeadersWidth = 62;
             dgvPermisos.RowTemplate.Height = 33;
-            dgvPermisos.Size = new Size(508, 293);
+            dgvPermisos.Size = new Size(508, 407);
             dgvPermisos.TabIndex = 0;
             // 
             // txtDescripcionRol
@@ -132,7 +133,7 @@
             dgvGrupos.Name = "dgvGrupos";
             dgvGrupos.RowHeadersWidth = 62;
             dgvGrupos.RowTemplate.Height = 33;
-            dgvGrupos.Size = new Size(508, 293);
+            dgvGrupos.Size = new Size(508, 407);
             dgvGrupos.TabIndex = 21;
             dgvGrupos.CellContentClick += dgvGrupos_CellClick;
             // 
@@ -167,11 +168,34 @@
             label1.TabIndex = 23;
             label1.Text = "Nombre del grupo:";
             // 
+            // btnregresar
+            // 
+            btnregresar.BackColor = Color.Teal;
+            btnregresar.Cursor = Cursors.Hand;
+            btnregresar.FlatAppearance.BorderColor = Color.Black;
+            btnregresar.FlatStyle = FlatStyle.Flat;
+            btnregresar.ForeColor = Color.White;
+            btnregresar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            btnregresar.IconColor = Color.White;
+            btnregresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnregresar.IconSize = 16;
+            btnregresar.Location = new Point(734, 437);
+            btnregresar.Margin = new Padding(4, 5, 4, 5);
+            btnregresar.Name = "btnregresar";
+            btnregresar.Size = new Size(261, 38);
+            btnregresar.TabIndex = 24;
+            btnregresar.Text = "Regresar";
+            btnregresar.TextAlign = ContentAlignment.MiddleRight;
+            btnregresar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnregresar.UseVisualStyleBackColor = false;
+            btnregresar.Click += btnregresar_Click;
+            // 
             // frmPermisos
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1549, 694);
+            ClientSize = new Size(1422, 498);
+            Controls.Add(btnregresar);
             Controls.Add(label1);
             Controls.Add(btncancelar);
             Controls.Add(dgvGrupos);
@@ -199,5 +223,6 @@
         private DataGridView dgvGrupos;
         private FontAwesome.Sharp.IconButton btncancelar;
         private Label label1;
+        private FontAwesome.Sharp.IconButton btnregresar;
     }
 }
