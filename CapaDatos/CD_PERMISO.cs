@@ -11,31 +11,37 @@ namespace CapaDatos
     {
         public List<Permiso> Listar(int idusuario)
         {
-            List<Permiso> lista = new List<Permiso>();
+            var lista = new List<Permiso>();
+
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
                 try
                 {
-                    StringBuilder query = new StringBuilder();
-                    query.AppendLine("select p.IdRol, p.NombreMenu from PERMISO p");
-                    query.AppendLine("inner join ROL r on r.IdRol = p.IdRol");
-                    query.AppendLine("inner join USUARIO u on u.IdRol = r.IdRol");
-                    query.AppendLine("where u.IdUsuario = @idusuario");
+                    // Lee permisos del rol del usuario usando la tabla de relación
+                    string query = @"
+                SELECT p.IdPermiso, p.NombreMenu
+                FROM USUARIO u
+                INNER JOIN ROL r ON r.IdRol = u.IdRol
+                INNER JOIN RelacionPermisoRol rr ON rr.IdRol = r.IdRol
+                INNER JOIN PERMISO p ON p.IdPermiso = rr.IdPermiso
+                WHERE u.IdUsuario = @idusuario";
 
-                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
-                    cmd.Parameters.AddWithValue("@idusuario", idusuario);
-                    cmd.CommandType = CommandType.Text;
-
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand(query, oconexion))
                     {
-                        while (dr.Read())
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@idusuario", idusuario);
+
+                        oconexion.Open();
+                        using (SqlDataReader dr = cmd.ExecuteReader())
                         {
-                            lista.Add(new Permiso()
+                            while (dr.Read())
                             {
-                                oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]) },
-                                NombreMenu = dr["NombreMenu"].ToString()
-                            });
+                                lista.Add(new Permiso
+                                {
+                                    IdPermiso = Convert.ToInt32(dr["IdPermiso"]),
+                                    NombreMenu = dr["NombreMenu"].ToString()
+                                });
+                            }
                         }
                     }
                 }
@@ -44,6 +50,7 @@ namespace CapaDatos
                     lista = new List<Permiso>();
                 }
             }
+
             return lista;
         }
 
