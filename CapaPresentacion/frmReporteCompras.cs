@@ -48,13 +48,11 @@ namespace CapaPresentacion
         {
             int idproveedor = Convert.ToInt32(((OpcionCombo)cboproveedor.SelectedItem).Valor.ToString());
 
-            List<ReporteCompra> lista = new List<ReporteCompra>();
-
-            lista = new CN_Reporte().Compra(
-                txtfechainicio.Value.ToString(),
-                txtfechafin.Value.ToString(),
+            List<ReporteCompra> lista = new CN_Reporte().Compra(
+                txtfechainicio.Value.ToString("yyyy-MM-dd"),   
+                txtfechafin.Value.ToString("yyyy-MM-dd"),      
                 idproveedor
-                );
+            );
 
             dgvdata.Rows.Clear();
 
@@ -62,23 +60,24 @@ namespace CapaPresentacion
             {
                 dgvdata.Rows.Add(new object[]
                 {
-                    rc.FechaRegistro,
-                    rc.TipoDocumento,
-                    rc.NumeroDocumento,
-                    rc.MontoTotal,
-                    rc.UsuarioRegistro,
-                    rc.DocumentoProveedor,
-                    rc.RazonSocial,
-                    rc.CodigoProducto,
-                    rc.NombreProducto,
-                    rc.Categoria,
-                    rc.PrecioCompra,
-                    rc.PrecioVenta,
-                    rc.Cantidad,
-                    rc.SubTotal,
+            rc.FechaRegistro,
+            rc.TipoDocumento,
+            rc.NumeroDocumento,
+            rc.MontoTotal,
+            rc.UsuarioRegistro,
+            rc.DocumentoProveedor,
+            rc.RazonSocial,
+            rc.CodigoProducto,
+            rc.NombreProducto,
+            rc.Categoria,
+            rc.PrecioCompra,
+            rc.PrecioVenta,
+            rc.Cantidad,
+            rc.SubTotal,
                 });
             }
         }
+
 
         private void btnexpotar_Click(object sender, EventArgs e)
         {

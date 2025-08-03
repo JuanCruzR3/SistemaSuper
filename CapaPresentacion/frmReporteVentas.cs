@@ -122,9 +122,10 @@ namespace CapaPresentacion
 
         private void btnbuscarproveedor_Click_1(object sender, EventArgs e)
         {
-            List<ReporteVenta> lista = new List<ReporteVenta>();
-
-            lista = new CN_Reporte().Venta(txtfechainicio.Value.ToString(), txtfechafin.Value.ToString());
+            List<ReporteVenta> lista = new CN_Reporte().Venta(
+                txtfechainicio.Value.ToString("yyyy-MM-dd"),  
+                txtfechafin.Value.ToString("yyyy-MM-dd")      
+            );
 
             dgvdata.Rows.Clear();
 
@@ -132,21 +133,22 @@ namespace CapaPresentacion
             {
                 dgvdata.Rows.Add(new object[]
                 {
-                    rv.FechaRegistro,
-                    rv.TipoDocumento,
-                    rv.NumeroDocumento,
-                    rv.MontoTotal,
-                    rv.UsuarioRegistro,
-                    rv.DocumentoCliente,
-                    rv.NombreCliente,
-                    rv.CodigoProducto,
-                    rv.NombreProducto,
-                    rv.Categoria,
-                    rv.PrecioVenta,
-                    rv.Cantidad,
-                    rv.SubTotal,
+            rv.FechaRegistro,
+            rv.TipoDocumento,
+            rv.NumeroDocumento,
+            rv.MontoTotal,
+            rv.UsuarioRegistro,
+            rv.DocumentoCliente,
+            rv.NombreCliente,
+            rv.CodigoProducto,
+            rv.NombreProducto,
+            rv.Categoria,
+            rv.PrecioVenta,
+            rv.Cantidad,
+            rv.SubTotal,
                 });
             }
         }
+
     }
 }
