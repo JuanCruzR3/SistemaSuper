@@ -181,7 +181,7 @@ namespace CapaDatos
         }
 
 
-        public List<Detalle_Venta> ObtenerDetalleVenta (int idVenta)
+        public List<Detalle_Venta> ObtenerDetalleVenta(int idVenta)
         {
             List<Detalle_Venta> oLista = new List<Detalle_Venta>();
 
@@ -189,15 +189,15 @@ namespace CapaDatos
             {
                 try
                 {
-                    conexion.Open(); 
-                    StringBuilder query = new StringBuilder(); 
+                    conexion.Open();
+                    StringBuilder query = new StringBuilder();
                     query.AppendLine("select p.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal from DETALLE_VENTA dv ");
                     query.AppendLine("inner join PRODUCTO p on p.IdProducto = dv.IdProducto");
-                    query.AppendLine("where dv.IdVenta = 1");
+                    query.AppendLine("where dv.IdVenta = @idVenta");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
                     cmd.Parameters.AddWithValue("@idVenta", idVenta);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandType = CommandType.Text;
 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
@@ -210,18 +210,18 @@ namespace CapaDatos
                                 Cantidad = Convert.ToInt32(dr["Cantidad"].ToString()),
                                 SubTotal = Convert.ToDecimal(dr["SubTotal"].ToString())
                             });
-   
                         }
                     }
-                } 
-                catch (Exception ex)
+                }
+                catch
                 {
                     oLista = new List<Detalle_Venta>();
                 }
             }
 
-                return oLista; 
+            return oLista;
         }
-    }       
+
+    }
 }
 

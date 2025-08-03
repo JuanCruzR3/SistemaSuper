@@ -49,7 +49,7 @@
             dgvPermisos.Name = "dgvPermisos";
             dgvPermisos.RowHeadersWidth = 62;
             dgvPermisos.RowTemplate.Height = 33;
-            dgvPermisos.Size = new Size(508, 407);
+            dgvPermisos.Size = new Size(370, 407);
             dgvPermisos.TabIndex = 0;
             // 
             // txtDescripcionRol
@@ -129,11 +129,11 @@
             // 
             dgvGrupos.BackgroundColor = SystemColors.Control;
             dgvGrupos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGrupos.Location = new Point(887, 22);
+            dgvGrupos.Location = new Point(756, 22);
             dgvGrupos.Name = "dgvGrupos";
             dgvGrupos.RowHeadersWidth = 62;
             dgvGrupos.RowTemplate.Height = 33;
-            dgvGrupos.Size = new Size(508, 407);
+            dgvGrupos.Size = new Size(318, 407);
             dgvGrupos.TabIndex = 21;
             dgvGrupos.CellContentClick += dgvGrupos_CellClick;
             // 
@@ -179,7 +179,7 @@
             btnregresar.IconColor = Color.White;
             btnregresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnregresar.IconSize = 16;
-            btnregresar.Location = new Point(734, 437);
+            btnregresar.Location = new Point(610, 446);
             btnregresar.Margin = new Padding(4, 5, 4, 5);
             btnregresar.Name = "btnregresar";
             btnregresar.Size = new Size(261, 38);
@@ -194,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1422, 498);
+            ClientSize = new Size(1096, 498);
             Controls.Add(btnregresar);
             Controls.Add(label1);
             Controls.Add(btncancelar);
@@ -205,6 +205,7 @@
             Controls.Add(txtDescripcionRol);
             Controls.Add(dgvPermisos);
             Name = "frmPermisos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPermisos";
             Load += frmPermisos_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPermisos).EndInit();
