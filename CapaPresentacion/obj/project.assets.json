@@ -792,19 +792,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\juanc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectUniqueName": "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\CapaPresentacion.csproj",
       "projectName": "CapaPresentacion",
-      "projectPath": "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\CapaPresentacion.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\obj\\",
+      "projectPath": "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\CapaPresentacion.csproj",
+      "packagesPath": "C:\\Users\\juanc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaPresentacion\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -818,11 +823,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaEntidad\\CapaEntidad.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaEntidad\\CapaEntidad.csproj"
+            "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaEntidad\\CapaEntidad.csproj": {
+              "projectPath": "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaEntidad\\CapaEntidad.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaNegocio\\CapaNegocio.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaNegocio\\CapaNegocio.csproj"
+            "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaNegocio\\CapaNegocio.csproj": {
+              "projectPath": "C:\\Users\\juanc\\OneDrive\\Desktop\\Juan\\Sistema Ventas\\SistemaVentas\\SistemaVentas\\CapaNegocio\\CapaNegocio.csproj"
             }
           }
         }
@@ -831,7 +836,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net7.0-windows7.0": {
@@ -881,7 +892,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

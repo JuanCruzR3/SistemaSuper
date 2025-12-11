@@ -18,13 +18,14 @@ namespace CapaDatos
                 try
                 {
                     // Lee permisos del rol del usuario usando la tabla de relación
+                    // Consulta correcta para CD_Permiso.cs Listar(int idusuario):
                     string query = @"
-                SELECT p.IdPermiso, p.NombreMenu
-                FROM USUARIO u
-                INNER JOIN ROL r ON r.IdRol = u.IdRol
-                INNER JOIN RelacionPermisoRol rr ON rr.IdRol = r.IdRol
-                INNER JOIN PERMISO p ON p.IdPermiso = rr.IdPermiso
-                WHERE u.IdUsuario = @idusuario";
+    SELECT p.IdPermiso, p.NombreMenu
+    FROM USUARIO u
+    INNER JOIN ROL r ON r.IdRol = u.IdRol
+    INNER JOIN RelacionPermisoRol rr ON rr.IdRol = r.IdRol  -- Usa la nueva tabla
+    INNER JOIN PERMISO p ON p.IdPermiso = rr.IdPermiso
+    WHERE u.IdUsuario = @idusuario";
 
                     using (SqlCommand cmd = new SqlCommand(query, oconexion))
                     {

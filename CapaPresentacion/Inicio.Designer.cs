@@ -60,10 +60,10 @@
             menu.BackColor = Color.White;
             menu.ImageScalingSize = new Size(24, 24);
             menu.Items.AddRange(new ToolStripItem[] { menuusuarios, menumantenedor, menuventas, menucompras, menuclientes, menuproveedores, menureportes, menuacercade });
-            menu.Location = new Point(0, 97);
+            menu.Location = new Point(0, 78);
             menu.Name = "menu";
-            menu.Padding = new Padding(9, 3, 0, 3);
-            menu.Size = new Size(1750, 85);
+            menu.Padding = new Padding(7, 2, 0, 2);
+            menu.Size = new Size(1400, 78);
             menu.TabIndex = 0;
             menu.Text = "menuStrip1";
             // 
@@ -75,7 +75,7 @@
             menuusuarios.IconSize = 50;
             menuusuarios.ImageScaling = ToolStripItemImageScaling.None;
             menuusuarios.Name = "menuusuarios";
-            menuusuarios.Size = new Size(96, 79);
+            menuusuarios.Size = new Size(79, 74);
             menuusuarios.Text = "Usuarios";
             menuusuarios.TextImageRelation = TextImageRelation.ImageAboveText;
             menuusuarios.Click += menuusuarios_Click;
@@ -89,7 +89,7 @@
             menumantenedor.IconSize = 50;
             menumantenedor.ImageScaling = ToolStripItemImageScaling.None;
             menumantenedor.Name = "menumantenedor";
-            menumantenedor.Size = new Size(125, 79);
+            menumantenedor.Size = new Size(104, 74);
             menumantenedor.Text = "Mantenedor";
             menumantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -99,7 +99,7 @@
             submenucategoria.IconColor = Color.Black;
             submenucategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenucategoria.Name = "submenucategoria";
-            submenucategoria.Size = new Size(190, 34);
+            submenucategoria.Size = new Size(157, 26);
             submenucategoria.Text = "Categoria";
             submenucategoria.Click += submenucategoria_Click;
             // 
@@ -109,14 +109,14 @@
             submenuproducto.IconColor = Color.Black;
             submenuproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuproducto.Name = "submenuproducto";
-            submenuproducto.Size = new Size(190, 34);
+            submenuproducto.Size = new Size(157, 26);
             submenuproducto.Text = "Producto";
             submenuproducto.Click += submenuproducto_Click;
             // 
             // submenunegocio
             // 
             submenunegocio.Name = "submenunegocio";
-            submenunegocio.Size = new Size(190, 34);
+            submenunegocio.Size = new Size(157, 26);
             submenunegocio.Text = "Negocio";
             submenunegocio.Click += submenunegocio_Click;
             // 
@@ -129,7 +129,7 @@
             menuventas.IconSize = 50;
             menuventas.ImageScaling = ToolStripItemImageScaling.None;
             menuventas.Name = "menuventas";
-            menuventas.Size = new Size(80, 79);
+            menuventas.Size = new Size(66, 74);
             menuventas.Text = "Ventas";
             menuventas.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -139,7 +139,7 @@
             submenuregistrarventa.IconColor = Color.Black;
             submenuregistrarventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuregistrarventa.Name = "submenuregistrarventa";
-            submenuregistrarventa.Size = new Size(198, 34);
+            submenuregistrarventa.Size = new Size(165, 26);
             submenuregistrarventa.Text = "Registrar";
             submenuregistrarventa.Click += submenuregistrarventa_Click;
             // 
@@ -149,7 +149,7 @@
             submenuverdetalleventa.IconColor = Color.Black;
             submenuverdetalleventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuverdetalleventa.Name = "submenuverdetalleventa";
-            submenuverdetalleventa.Size = new Size(198, 34);
+            submenuverdetalleventa.Size = new Size(165, 26);
             submenuverdetalleventa.Text = "Ver Detalle";
             submenuverdetalleventa.Click += submenuverdetalleventa_Click;
             // 
@@ -162,7 +162,7 @@
             menucompras.IconSize = 50;
             menucompras.ImageScaling = ToolStripItemImageScaling.None;
             menucompras.Name = "menucompras";
-            menucompras.Size = new Size(100, 79);
+            menucompras.Size = new Size(82, 74);
             menucompras.Text = "Compras";
             menucompras.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -172,7 +172,7 @@
             submenuregistrarcompra.IconColor = Color.Black;
             submenuregistrarcompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuregistrarcompra.Name = "submenuregistrarcompra";
-            submenuregistrarcompra.Size = new Size(198, 34);
+            submenuregistrarcompra.Size = new Size(165, 26);
             submenuregistrarcompra.Text = "Registrar";
             submenuregistrarcompra.Click += submenuregistrarcompra_Click;
             // 
@@ -182,7 +182,7 @@
             submenuverdetallecompra.IconColor = Color.Black;
             submenuverdetallecompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuverdetallecompra.Name = "submenuverdetallecompra";
-            submenuverdetallecompra.Size = new Size(198, 34);
+            submenuverdetallecompra.Size = new Size(165, 26);
             submenuverdetallecompra.Text = "Ver Detalle";
             submenuverdetallecompra.Click += submenuverdetallecompra_Click;
             // 
@@ -194,7 +194,7 @@
             menuclientes.IconSize = 50;
             menuclientes.ImageScaling = ToolStripItemImageScaling.None;
             menuclientes.Name = "menuclientes";
-            menuclientes.Size = new Size(89, 79);
+            menuclientes.Size = new Size(75, 74);
             menuclientes.Text = "Clientes";
             menuclientes.TextImageRelation = TextImageRelation.ImageAboveText;
             menuclientes.Click += menuclientes_Click;
@@ -207,7 +207,7 @@
             menuproveedores.IconSize = 50;
             menuproveedores.ImageScaling = ToolStripItemImageScaling.None;
             menuproveedores.Name = "menuproveedores";
-            menuproveedores.Size = new Size(127, 79);
+            menuproveedores.Size = new Size(105, 74);
             menuproveedores.Text = "Proveedores";
             menuproveedores.TextImageRelation = TextImageRelation.ImageAboveText;
             menuproveedores.Click += menuproveedores_Click;
@@ -221,21 +221,21 @@
             menureportes.IconSize = 50;
             menureportes.ImageScaling = ToolStripItemImageScaling.None;
             menureportes.Name = "menureportes";
-            menureportes.Size = new Size(98, 79);
+            menureportes.Size = new Size(82, 74);
             menureportes.Text = "Reportes";
             menureportes.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // submenureportecompras
             // 
             submenureportecompras.Name = "submenureportecompras";
-            submenureportecompras.Size = new Size(253, 34);
+            submenureportecompras.Size = new Size(208, 26);
             submenureportecompras.Text = "Reporte Compras";
             submenureportecompras.Click += submenureportecompras_Click;
             // 
             // submenureporteventas
             // 
             submenureporteventas.Name = "submenureporteventas";
-            submenureporteventas.Size = new Size(253, 34);
+            submenureporteventas.Size = new Size(208, 26);
             submenureporteventas.Text = "Reporte Ventas";
             submenureporteventas.Click += submenureporteventas_Click;
             // 
@@ -247,7 +247,7 @@
             menuacercade.IconSize = 50;
             menuacercade.ImageScaling = ToolStripItemImageScaling.None;
             menuacercade.Name = "menuacercade";
-            menuacercade.Size = new Size(107, 79);
+            menuacercade.Size = new Size(91, 74);
             menuacercade.Text = "Acerca De";
             menuacercade.TextImageRelation = TextImageRelation.ImageAboveText;
             menuacercade.Click += menuacercade_Click;
@@ -259,9 +259,9 @@
             menutitulo.ImageScalingSize = new Size(24, 24);
             menutitulo.Location = new Point(0, 0);
             menutitulo.Name = "menutitulo";
-            menutitulo.Padding = new Padding(9, 3, 0, 3);
+            menutitulo.Padding = new Padding(7, 2, 0, 2);
             menutitulo.RightToLeft = RightToLeft.Yes;
-            menutitulo.Size = new Size(1750, 97);
+            menutitulo.Size = new Size(1400, 78);
             menutitulo.TabIndex = 1;
             menutitulo.Text = "menuStrip2";
             // 
@@ -271,20 +271,19 @@
             label1.BackColor = Color.SteelBlue;
             label1.Font = new Font("Verdana", 20.25F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(11, 13);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(9, 10);
             label1.Name = "label1";
-            label1.Size = new Size(419, 49);
+            label1.Size = new Size(348, 41);
             label1.TabIndex = 2;
             label1.Text = "SUPER PRIMAVERA";
             // 
             // contenedor
             // 
             contenedor.Dock = DockStyle.Fill;
-            contenedor.Location = new Point(0, 182);
-            contenedor.Margin = new Padding(4, 5, 4, 5);
+            contenedor.Location = new Point(0, 156);
+            contenedor.Margin = new Padding(3, 4, 3, 4);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1750, 844);
+            contenedor.Size = new Size(1400, 665);
             contenedor.TabIndex = 3;
             // 
             // label2
@@ -293,10 +292,9 @@
             label2.BackColor = Color.SteelBlue;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(1027, 38);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(822, 30);
             label2.Name = "label2";
-            label2.Size = new Size(83, 28);
+            label2.Size = new Size(72, 23);
             label2.TabIndex = 4;
             label2.Text = "Usuario:";
             // 
@@ -306,10 +304,9 @@
             lblusuario.BackColor = Color.SteelBlue;
             lblusuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblusuario.ForeColor = Color.White;
-            lblusuario.Location = new Point(1107, 38);
-            lblusuario.Margin = new Padding(4, 0, 4, 0);
+            lblusuario.Location = new Point(886, 30);
             lblusuario.Name = "lblusuario";
-            lblusuario.Size = new Size(101, 28);
+            lblusuario.Size = new Size(86, 23);
             lblusuario.TabIndex = 5;
             lblusuario.Text = "lblUsuario";
             // 
@@ -323,19 +320,19 @@
             btnsalir.IconColor = Color.Firebrick;
             btnsalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnsalir.IconSize = 40;
-            btnsalir.Location = new Point(1624, 13);
-            btnsalir.Margin = new Padding(4, 5, 4, 5);
+            btnsalir.Location = new Point(1299, 10);
+            btnsalir.Margin = new Padding(3, 4, 3, 4);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(90, 78);
+            btnsalir.Size = new Size(72, 62);
             btnsalir.TabIndex = 6;
             btnsalir.UseVisualStyleBackColor = false;
             btnsalir.Click += btnsalir_Click;
             // 
             // Inicio
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1750, 1026);
+            ClientSize = new Size(1400, 821);
             Controls.Add(btnsalir);
             Controls.Add(lblusuario);
             Controls.Add(label2);
@@ -344,7 +341,7 @@
             Controls.Add(menu);
             Controls.Add(menutitulo);
             MainMenuStrip = menu;
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
